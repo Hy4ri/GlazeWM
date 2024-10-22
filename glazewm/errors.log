@@ -1,0 +1,6 @@
+[2m2024-10-22T17:13:39.532912Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute 'spotify'.\n\nError: The operation was canceled by the user. (0x800704C7)"
+[2m2024-10-22T17:18:58.017259Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[0]: missing field `match` at line 113 column 5
+[2m2024-10-22T17:32:09.903428Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[5].commands: unrecognized subcommand
+ at line 133 column 15
+[2m2024-10-22T17:32:13.791587Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[5].commands: unrecognized subcommand
+ at line 133 column 15
