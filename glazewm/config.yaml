@@ -2,11 +2,11 @@ general:
   # Commands to run when the WM has started. This is useful for running a
   # script or launching another application.
   # Example: The below command launches Zebar.
-  startup_commands: ['shell-exec zebar']
+  startup_commands: []
 
   # Commands to run just before the WM is shutdown.
   # Example: The below command kills Zebar.
-  shutdown_commands: ['shell-exec taskkill /IM zebar.exe /F']
+  shutdown_commands: []
 
   # Commands to run after the WM config is reloaded.
   config_reload_commands: []
@@ -36,7 +36,7 @@ gaps:
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: '40px'
+    top: '0px'
     right: '0px'
     bottom: '0px'
     left: '0px'
@@ -95,7 +95,7 @@ window_behavior:
       maximized: false
 
       # Whether to show fullscreen windows as always on top.
-      shown_on_top: false
+      shown_on_top: true
 
 workspaces:
   - name: '1'
@@ -112,27 +112,21 @@ workspaces:
 window_rules:
   - commands: ["move --workspace 1"]
     match:
-      - window_title: { equals: "vivaldi" }
       
   - commands: ["move --workspace 2"]
     match:
-      - window_title: { regex: "Notepad++" }
       
   - commands: ["move --workspace 3"]
     match:
-      - window_title: { equals: "Windows Explorer" }
   
   - commands: ["move --workspace 4"]
     match:
-      - window_title: { equals: "Vesktop" }
   
   - commands: ["move --workspace 5"]
     match:
-      - window_title: { equals: "Steam" }
   
   - commands: ["move --workspace 10"]
     match:
-      - window_title: { equals: "Spotify" }
   
   - commands: ['set-tiling']
     match:
@@ -217,8 +211,8 @@ keybindings:
   # Launch CMD terminal. Alternatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
-  - commands: ['shell-exec wt']
-    bindings: ['alt+enter']
+  - commands: ['shell-exec alacritty']
+    bindings: ['alt+back']
 
   # Focus the next/previous workspace defined in `workspaces` config.
   - commands: ['focus --next-workspace']
@@ -226,7 +220,7 @@ keybindings:
 
   # Focus the workspace that last had focus.
   - commands: ['focus --recent-workspace']
-    bindings: ['alt+d']
+    bindings: ['alt+z']
 
   # Change focus to a workspace defined in `workspaces` config.
   - commands: ['focus --workspace 1']
@@ -299,8 +293,6 @@ keybindings:
     bindings: ['alt+v']
   - commands: ['shell-exec explorer']
     bindings: ['alt+e']
-  - commands: ['shell-exec wt']
-    bindings: ['alt+enter']
   - commands: ['shell-exec spicetify.exe restart']
     bindings: ['alt+s']
   
